@@ -48,7 +48,7 @@ if (argOne === "my-tweets") {
 
     request('http://www.omdbapi.com/?apikey=40e9cece&t=' + argTwo + '&r=json', function(error, response, body) {
         if (!error) {
-
+        	console.log('===============================================================');
             console.log('Movie: ' + JSON.parse(body).Title);
             console.log('Year: ' + JSON.parse(body).Year);
             console.log('IMDB Rating: ' + JSON.parse(body).imdbRating);
@@ -58,6 +58,7 @@ if (argOne === "my-tweets") {
             console.log('Plot: ' + JSON.parse(body).Plot);
             console.log('Actors: ' + JSON.parse(body).Actors);
             console.log('Rotten Tomatoes Rating: ' + JSON.parse(body).Ratings[1].Value);
+            console.log('===============================================================')
         }
 
         fs.appendFile(logText, ", " + body, function(err) {
