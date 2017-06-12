@@ -4,6 +4,8 @@
   "description": "This is a bot that take command lines and gets twitter feeds and omdb to get movies titals and descriptions",
   "main": "liri.js",
   "dependencies": {
+    "prettyjson": "^1.2.1",
+    "request": "^2.81.0",
     "twitter": "^1.7.0"
   },
   "devDependencies": {},
